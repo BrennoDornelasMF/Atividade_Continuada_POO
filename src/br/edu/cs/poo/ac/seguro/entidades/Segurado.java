@@ -39,7 +39,7 @@ public class Segurado {
 		return dataCriacao;
 	}
 	
-	protected void setDatariacao(LocalDate dataCriacao) {
+	protected void setDataCriacao(LocalDate dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
 	

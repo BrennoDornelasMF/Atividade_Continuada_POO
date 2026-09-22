@@ -45,7 +45,7 @@ public class SeguradoEmpresa extends Segurado{
 		return super.getDataCriacao();
 		}
 	public void setDataAbertura(LocalDate dataAbertura) {
-		super.setDatariacao(dataAbertura);
+		super.setDataCriacao(dataAbertura);
 	}
 	
 
