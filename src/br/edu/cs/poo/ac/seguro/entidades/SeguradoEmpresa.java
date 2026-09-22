@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class SeguradoEmpresa extends Segurado{
 	
+	private static final long serialVersionUID = 1L;
 	private String cnpj;
 	private double faturamento;
 	private boolean ehLocadoraDeVeiculos;

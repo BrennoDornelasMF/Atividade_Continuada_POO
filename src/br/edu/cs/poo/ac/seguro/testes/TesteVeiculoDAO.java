@@ -9,6 +9,8 @@ import br.edu.cs.poo.ac.seguro.entidades.CategoriaVeiculo;
 import br.edu.cs.poo.ac.seguro.entidades.Veiculo;
 
 public class TesteVeiculoDAO extends TesteDAO {
+	
+	
 	private VeiculoDAO dao = new VeiculoDAO();
 	protected Class getClasse() {
 		return Veiculo.class;
