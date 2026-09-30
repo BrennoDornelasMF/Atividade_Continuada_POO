@@ -48,6 +48,7 @@ public class SeguradoEmpresaMediator {
 		if (msg != null) {
 			return msg;
 		}
+
 		msg = seguradoMediator.validarDataCriacao(seg.getDataAbertura());
 		if (msg != null) {
 			return msg.replace("criação", "abertura");
