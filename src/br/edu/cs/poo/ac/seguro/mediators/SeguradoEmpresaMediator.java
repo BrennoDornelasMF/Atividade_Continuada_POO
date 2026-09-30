@@ -4,6 +4,8 @@ import br.edu.cs.poo.ac.seguro.daos.SeguradoEmpresaDAO;
 import br.edu.cs.poo.ac.seguro.entidades.SeguradoEmpresa;
 
 public class SeguradoEmpresaMediator {
+	
+	
 	public String validarCnpj(String cnpj) {
 		return null;
 	}

@@ -1,7 +1,10 @@
 package br.edu.cs.poo.ac.seguro.entidades;
 
-public class Endereco {
+import java.io.Serializable;
+
+public class Endereco implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private String logradouro;
 	private String cep;
 	private String numero;
@@ -22,7 +25,7 @@ public class Endereco {
 		this.cidade = cidade;
 	}
 
-	protected String getLogradouro() {
+	public String getLogradouro() {
 		return logradouro;
 	}
 
@@ -30,7 +33,7 @@ public class Endereco {
 		this.logradouro = logradouro;
 	}
 
-	protected String getCep() {
+	public String getCep() {
 		return cep;
 	}
 
@@ -38,7 +41,7 @@ public class Endereco {
 		this.cep = cep;
 	}
 
-	protected String getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
@@ -46,7 +49,7 @@ public class Endereco {
 		this.numero = numero;
 	}
 
-	protected String getComplemento() {
+	public String getComplemento() {
 		return complemento;
 	}
 
@@ -54,7 +57,7 @@ public class Endereco {
 		this.complemento = complemento;
 	}
 
-	protected String getPais() {
+	public String getPais() {
 		return pais;
 	}
 
@@ -62,7 +65,7 @@ public class Endereco {
 		this.pais = pais;
 	}
 
-	protected String getEstado() {
+	public String getEstado() {
 		return estado;
 	}
 
@@ -70,7 +73,7 @@ public class Endereco {
 		this.estado = estado;
 	}
 
-	protected String getCidade() {
+	public String getCidade() {
 		return cidade;
 	}
 

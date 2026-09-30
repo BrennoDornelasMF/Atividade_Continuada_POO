@@ -30,7 +30,7 @@ public class Segurado implements Serializable  {
 		this.nome = nome;
 	}
 		
-	public Endereco gdataNascimentoetEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
