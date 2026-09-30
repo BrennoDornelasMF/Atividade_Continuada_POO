@@ -25,7 +25,7 @@ public class TesteVeiculoDAO extends TesteDAO {
 	public void teste02() {
 		String placa = "10000000";
 		cadastro.incluir(new Veiculo(placa, 2001, null, null, CategoriaVeiculo.BASICO), placa);
-		Veiculo ve = dao.buscar("11000000");
+		Veiculo ve = dao.buscar("10000000");
 		Assertions.assertNull(ve);
 	}
 	@Test
