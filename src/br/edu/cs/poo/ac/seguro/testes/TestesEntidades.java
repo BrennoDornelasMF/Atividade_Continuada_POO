@@ -33,7 +33,7 @@ public class TestesEntidades {
 	}	
 	@Test
 	public void teste03() {
-		SeguradoEmpresa seg = new SeguradoEmpresa("JOCA", null, null, BigDecimal.ZERO, null, 0.0, false);
+		SeguradoEmpresa seg = new SeguradoEmpresa("JOCA", null, null,new BigDecimal("0.0"), null, 0.0, false);
 		seg.creditarBonus(new BigDecimal("100.00"));
 		seg.creditarBonus(new BigDecimal("50.00"));
 		Assertions.assertEquals(seg.getBonus(), new BigDecimal("150.00"));

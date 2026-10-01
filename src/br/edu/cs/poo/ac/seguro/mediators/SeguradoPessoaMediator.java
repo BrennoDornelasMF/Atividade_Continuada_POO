@@ -1,5 +1,7 @@
 package br.edu.cs.poo.ac.seguro.mediators;
 
+import java.time.LocalDate;
+
 import br.edu.cs.poo.ac.seguro.daos.SeguradoPessoaDAO;
 import br.edu.cs.poo.ac.seguro.entidades.SeguradoPessoa;
 
@@ -32,8 +34,8 @@ public class SeguradoPessoaMediator {
 	}
 	
 	public String validarRenda(double renda) {
-		if (renda <= 0) {
-			return "Renda deve ser maior que zero";
+		if (renda < 0) {
+			return "Renda deve ser maior ou igual à zero";
 		}
 		return null;
 	}
@@ -87,6 +89,13 @@ public class SeguradoPessoaMediator {
 			return msg;
 		}
 		
+		if (seg.getDataNacimento() == null) {
+			return "Data do nascimento deve ser informada";
+		}
+		if (seg.getDataNacimento().isAfter(LocalDate.now())) {
+			return "Data do nascimento deve ser menor ou igual à data atual";
+		}
+	
 		return validarRenda(seg.getRenda());
 	}
 }

@@ -9,6 +9,9 @@ public class StringUtils {
 		return false;
 	}
     public static boolean temSomenteNumeros(String input) {
-        return input.matches("\\d"); 
+        if (input == null || input.isEmpty()) {
+            return false;
+        }
+        return input.matches("^\\d+$");
     }
 }

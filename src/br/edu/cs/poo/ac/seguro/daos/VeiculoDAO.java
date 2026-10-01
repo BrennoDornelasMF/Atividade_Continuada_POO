@@ -23,7 +23,7 @@ public class VeiculoDAO extends DAOGenerico {
 	}
 	
 	public boolean alterar(Veiculo veiculo) {
-		if(buscar(veiculo.getPlaca()) != null) {
+		if(buscar(veiculo.getPlaca()) == null) {
 			return false;
 		} else {
 			cadastro.alterar(veiculo, veiculo.getPlaca());

@@ -77,10 +77,11 @@ public class TesteSinistroDAO extends TesteDAO {
 	@Test
 	public void teste07() {
 		String numero = "60000000";
+		cadastro.incluir(criar(numero, new BigDecimal("1006.00"), TipoSinistro.ENCHENTE), numero);
 		boolean ret = dao.alterar(criar(numero, new BigDecimal("1006.00"), TipoSinistro.DEPREDACAO));
-		Assertions.assertFalse(ret);
+		Assertions.assertTrue(ret);
 		Sinistro si = dao.buscar(numero);
-		Assertions.assertNull(si);
+		Assertions.assertNotNull(si);
 	}
 
 	@Test

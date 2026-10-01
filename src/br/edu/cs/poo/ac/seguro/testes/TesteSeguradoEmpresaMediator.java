@@ -90,7 +90,7 @@ public class TesteSeguradoEmpresaMediator extends TesteMediator {
 		seg = new SeguradoEmpresa("ACME LTDA", end, null,
 				BigDecimal.ZERO, "11851715000174", 1000.0, false);
 		ret = med.incluirSeguradoEmpresa(seg);
-		assertEquals("Data da abertura deve ser informada", ret);
+		assertEquals("Data da abertura deve ser informada", ret); // esse 
 		seg = new SeguradoEmpresa("ACME LTDA", end, LocalDate.now(),
 				BigDecimal.ZERO, "11851715000171", 1000.0, false);
 		ret = med.incluirSeguradoEmpresa(seg);
