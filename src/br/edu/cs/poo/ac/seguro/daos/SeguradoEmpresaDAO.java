@@ -23,7 +23,7 @@ public class SeguradoEmpresaDAO extends DAOGenerico{
 	}
 	
 	public boolean alterar(SeguradoEmpresa segurado) {
-		if(buscar(segurado.getCnpj()) != null) {
+		if(buscar(segurado.getCnpj()) == null) {
 			return false;
 		} else {
 			cadastro.alterar(segurado, segurado.getCnpj());
