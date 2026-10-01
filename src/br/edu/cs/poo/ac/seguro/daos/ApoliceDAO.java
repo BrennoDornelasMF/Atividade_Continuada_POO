@@ -35,6 +35,7 @@ public class ApoliceDAO extends DAOGenerico{
 			return false;
 		} else {
 			cadastro.excluir(numero);
+			return true;
 		}
 	}
 }
