@@ -1,12 +1,11 @@
 package br.edu.cs.poo.ac.seguro.entidades;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 
 
-public class Segurado implements Serializable  {
+public abstract class Segurado implements Registro {
 	
 	private static final long serialVersionUID = 1L;
 	private String nome;
@@ -21,6 +20,8 @@ public class Segurado implements Serializable  {
 		this.dataCriacao = dataCriacao;
 		this.bonus = bonus;
 	}
+
+	public abstract boolean isEmpresa();
 	
 	public String getNome() {
 		return nome;

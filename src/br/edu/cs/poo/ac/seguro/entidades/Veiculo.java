@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 
 @Getter
@@ -13,13 +11,17 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Veiculo implements Serializable {
+public class Veiculo implements Registro {
 	
 	private static final long serialVersionUID = 1L;
 	private String placa;
 	private int ano;
-	private SeguradoEmpresa proprietarioEmpresa;
-	private SeguradoPessoa proprietarioPessoa;
+	private Segurado proprietario;
 	private CategoriaVeiculo categoria;
+
+	@Override
+	public String getIdUnico() {
+		return placa;
+	}
 
 }
