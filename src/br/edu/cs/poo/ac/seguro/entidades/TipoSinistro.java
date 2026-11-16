@@ -25,11 +25,11 @@ public enum TipoSinistro{
 		
 	}
 
-	protected String getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	protected int getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 

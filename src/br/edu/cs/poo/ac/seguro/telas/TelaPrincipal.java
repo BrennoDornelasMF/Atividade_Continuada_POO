@@ -21,6 +21,7 @@ public class TelaPrincipal extends JFrame {
 
 	private final JButton btnSeguradoPessoa = new JButton("Segurado Pessoa");
 	private final JButton btnSeguradoEmpresa = new JButton("Segurado Empresa");
+	private final JButton btnSinistro = new JButton("Registrar Sinistro");
 	private final JButton btnSair = new JButton("Sair");
 
 	public TelaPrincipal() {
@@ -32,11 +33,13 @@ public class TelaPrincipal extends JFrame {
 		p.add(new JLabel("Cadastros", SwingConstants.CENTER));
 		p.add(btnSeguradoPessoa);
 		p.add(btnSeguradoEmpresa);
+		p.add(btnSinistro);
 		p.add(btnSair);
 		setContentPane(p);
 
 		btnSeguradoPessoa.addActionListener(e -> new TelaSeguradoPessoa().setVisible(true));
 		btnSeguradoEmpresa.addActionListener(e -> new TelaSeguradoEmpresa().setVisible(true));
+		btnSinistro.addActionListener(e -> new TelaSinistro().setVisible(true));
 		btnSair.addActionListener(e -> dispose());
 
 		pack();

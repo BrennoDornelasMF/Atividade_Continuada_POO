@@ -2,6 +2,7 @@ package br.edu.cs.poo.ac.seguro.telas;
 
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
@@ -65,6 +66,22 @@ public final class Campos {
 		editor.getTextField().setColumns(9);
 		spinner.setEditor(editor);
 		return spinner;
+	}
+
+	/** Seletor de data e hora para informar quando o sinistro ocorreu. */
+	public static JSpinner criarSpinnerDataHora() {
+		JSpinner spinner = new JSpinner(new SpinnerDateModel(new Date(), null, null, Calendar.MINUTE));
+		JSpinner.DateEditor editor = new JSpinner.DateEditor(spinner, "dd/MM/yyyy HH:mm");
+		editor.getFormat().setLenient(false);
+		editor.getTextField().setColumns(16);
+		spinner.setEditor(editor);
+		return spinner;
+	}
+
+	public static LocalDateTime lerDataHora(JSpinner spinner) throws ParseException {
+		spinner.commitEdit();
+		Date data = (Date) spinner.getValue();
+		return data.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 	}
 
 	/** Lê a data, aproveitando o que foi digitado à mão. Lança ParseException se o texto for inválido. */
